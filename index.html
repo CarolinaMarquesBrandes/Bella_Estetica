@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bella</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.banner').bxSlider({
+                mode: 'fade',
+                ramdomStart: true,
+                auto: true, // para rodar autom.
+                pause: 2000, // troca de 2 em 2 seg.
+                autoHover: true
+            });
+
+            $(".fechar, .opacidade").click(function() {
+                 $(".opacidade, .opacidade-popUp").css("visibility", "hidden")
+                // fadeOut esconde elem. com efeito
+            })
+            
+            $("#menuPrincipal a:nth-child(2)").click(function(){
+                $(".opacidade").css("visibility", "visible");
+            });
+            
+        
+        });
+    </script>
+</head>
+
+<body>
+    <div class="opacidade">
+        <article id="quem-somos">
+           <span class="fechar" id="fecha-quem-somos">X</span>
+            <h1>Quem Somos</h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi aliquid totam nam ab quibusdam natus ut nostrum suscipit. Ducimus beatae ea suscipit! Et reprehenderit fugit autem, quidem minus, nesciunt voluptas.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non mollitia, atque error qui est voluptates iure facere eos officiis quos illum dolorum ullam omnis architecto placeat excepturi incidunt nobis consequuntur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima est, voluptas in iste ex dolor tenetur perferendis quis optio magnam sapiente eum perspiciatis quidem, adipisci fugiat. Possimus vero, ex!</p>
+        </article>
+    </div>
+
+
+    <div class="opacidade-popUp">
+        <div id="popUp">
+            <span class="fechar">X</span>
+            <a href="#"><img src="img/popup.jpg" alt=""></a>
+        </div>
+    </div>
+
+
+
+    <header>
+        <div class="centralizar-conteudo flex-between">
+            <nav id="menuPrincipal">
+                <a href="index.html">Home</a>
+                <a href="#">Quem Somos</a>
+                <a href="servicos.html">Serviços</a>
+                <a href="clientes.html">Clientes</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Bella">
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="img/banner-1.jpg" alt="mulher recebendo massagem">
+        <img src="img/banner-2.jpg" alt="">
+        <img src="img/banner-3.jpg" alt="">
+    </div>
+
+    <div class="centralizar-conteudo">
+        <div id="depoimento">
+            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum ante eu lectus gravida commodo.”</p>
+            <span>Ana Santos</span>
+        </div>
+
+        <article>
+            <img class="img-float-left" src="img/itens-spa.jpg" alt="flores, toalha, sabonetes">
+
+            <h1>Lorem ipsum dolor sit amet </h1>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+
+            <a class="botao" href="#">Saiba mais</a>
+
+            <div class="clear-float"></div>
+        </article>
+
+
+
+        <div class="colunas">
+            <section class="coluna">
+                <h2>Nossos Serviços</h2>
+                <img src="img/imagem-servicos.jpg" alt="">
+                <a class="botao" href="#">Saiba mais</a>
+            </section>
+
+            <section class="coluna">
+                <h2>Especial Dia da Noiva</h2>
+                <img src="img/imagem-dia-da-noiva.jpg" alt="">
+                <a class="botao" href="#">Saiba mais</a>
+            </section>
+
+            <section class="coluna">
+                <h2>Nossos Serviços</h2>
+                <img src="img/imagem-ambiente.jpg" alt="">
+                <a class="botao" href="#">Saiba mais</a>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="centralizar-conteudo">
+            <p>Tel: (21) 3322-4455 / 98788-5544<br>
+                Avenida Rio Branco, 185 - Sala 324 - Centro - Rio de Janeiro</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
